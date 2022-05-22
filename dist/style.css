@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700");
+
+body {
+    background-color: #4E4E4E;
+}
+
+input {
+    font-size: 2.5vh;
+    background: #e8e8e8;
+    color: #090909;
+    padding: 1vh 1vh;
+    border: 2px solid transparent;
+    border-radius: .5rem;
+    margin: 1vh;
+}
+
+button {
+    font-size: 2.5vh;
+    background: #e8e8e8;
+    color: #090909;
+    margin: 1vh;
+    padding: 1vh 1vh;
+    border-radius: 1vh;
+    border: unset;
+    transition: all .3s;
+    box-shadow: 0.4vh 0.4vh 0.8vh #8b8a8a
+}
+
+button:active {
+    box-shadow: unset;
+}
+
+button:hover {
+    background: #fefefe;
+}
+
+.searchBar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#citiesContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+.cityContainer {
+    width: 70%;
+    display: flexbox;
+    position: relative;
+    margin: 1.2vh;
+    border-radius: 1.7vh;
+    background-color: #94D1BE;
+    padding: 1vh 3vh;
+    font-size: 2.5vh;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas:
+        "n ic"
+        "t ic"
+        "c ic";
+    grid-gap: 1vh;
+}
+
+.name {
+    grid-area: n;
+}
+
+.temperature {
+    grid-area: t;
+}
+
+.condition {
+    grid-area: c;
+}
+
+.conditionPic {
+    grid-area: ic;
+    color: #fefefe;
+    position: relative;
+    align-self: center;
+}
+
+.saveCityButton {
+    color: #3D3D3D;
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+}
+
+.saveCityButton:hover {
+    color: #3d3d3d69;
+}
+
+.removeCityButton {
+    color: rgba(255, 0, 0, 0.601);
+    position: absolute;
+    top: 2em;
+    right: 1vh;
+}
+
+.removeCityButton:hover {
+    color: rgba(255, 0, 0, 0.142);
+}

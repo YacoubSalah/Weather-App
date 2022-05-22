@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8923d82949.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="searchBar">
+        <input id="cityNameInputField" type="text" placeholder="Enter City Name">
+        <button id="getWeatherButton">Get Weather</button>
+        
+    </div>
+    <div id="citiesContainer"></div>
+
+    <script id="weatherTemplate" type="text/x-handlebars-template">
+        {{#each cities}}
+        <div class="cityContainer">
+            <div class="name">{{this.name}}</div>
+            <div class = "temperature">Temperature: {{this.temperature}}</div>
+            <div class = "condition">weather condition : {{this.condition}}</div>
+            <div class = "conditionPic"><i class="{{this.conditionPic}}"></i></div>
+            <i class="saveCityButton fa-solid fa-floppy-disk"></i>
+            <i class="removeCityButton fa-solid fa-trash-can"></i>
+        </div>
+        {{/each}}
+    </script>
+
+    <script src="Model.js"></script>
+    <script src="View.js"></script>
+    <script src="Controller.js"></script>
+</body>
+
+</html>
