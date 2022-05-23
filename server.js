@@ -16,5 +16,8 @@ const PORT = 3000
 app.listen(process.env.PORT || PORT);
 
 const mongoose = require("mongoose")
-mongoose.connect(process.env.MONGODB_URI||'mongodb://localhost/yourDB');
+mongoose.connect(process.env.MONGODB_URI||"mongodb+srv://allusers:user1234@cluster0.uiyjv.mongodb.net/Weather?retryWrites=true&w=majority")
+.then(function(){
+    console.log("Atlas Connected")
+})
 /* mongoose.connect("mongodb://localhost/Weather") */
